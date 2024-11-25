@@ -218,7 +218,7 @@ runs:
     - name: Build and Push to GitHub Container Registry
       uses: docker/bake-action@v5
       with:
-        push: true
+        push: false
         files: |
           docker/docker-bake.hcl
           ${{ steps.meta-base.outputs.bake-file }}
