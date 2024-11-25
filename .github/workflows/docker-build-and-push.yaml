@@ -73,6 +73,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Set swap memory
+        uses: actionhippie/swap-space@v1
+        with:
+          size: 15G
+
       - name: Free disk space
         uses: ./.github/actions/free-disk-space
 
